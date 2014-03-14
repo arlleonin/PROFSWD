@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Process-Bilis</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+        <!-- Loading Flat UI -->
+        <link href="css/flat-ui.css" rel="stylesheet">
+
+        <link href="css/style.css" rel="stylesheet">
+
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <script src="js/application.js"></script>
+        <script src="js/jquery.dataTables.js"></script>
+        <link href="css/jquery.dataTables.css" rel="stylesheet">
+        <script src="js/jquery_1.js"></script>
+        <script src="js/jquery-ui-1.8.17.js"></script>
+        <script type="text/javascript">
+            var giCount = 1;
+
+            $(document).ready(function() {
+                $('#example').dataTable();
+            });
+
+            function fnClickAddRow() {
+                $('#example').dataTable().fnAddData([
+                    giCount + ".1",
+                    giCount + ".2",
+                    giCount + ".3",
+                    giCount + ".4",
+                    giCount + ".5",
+                    giCount + ".6"]);
+
+                giCount++;
+            }
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                /* Init DataTables */
+                var oTable = $('#example').dataTable();
+
+                /* Apply the jEditable handlers to the table */
+                oTable.$('td').editable('editable_ajax.php', {
+                    "callback": function(sValue, y) {
+                        var aPos = oTable.fnGetPosition(this);
+                        oTable.fnUpdate(sValue, aPos[0], aPos[1]);
+                    },
+                    "submitdata": function(value, settings) {
+                        return {
+                            "row_id": this.parentNode.getAttribute('id'),
+                            "column": oTable.fnGetPosition(this)[2]
+                        };
+                    },
+                    "height": "14px",
+                    "width": "100%"
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container" style="padding-top: 3px;">
+            <div>
+                <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                            <span class="sr-only">Toggle navigation</span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse-01">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li>
+                                <a href="#">Process-Bilis</a>
+                            </li>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--<ol class="breadcrumb" style="margin-top: -30px;">
+            <li class="active"><a href="#"></a></li>
+            <li></li>
+        </ol>-->
+        <div class="container">
+            <div class="progress progress-striped active">
+                <div class="progress-bar" style="width: 100%;"></div>
+            </div>
+            <h5>Business Activity</h5>
+            <div id="example_wrapper" class="dataTables_wrapper" role="grid">
+                <table cellpadding="0" cellspacing="0" border="0" class="display dataTable" id="example" aria-describedby="example_info">
+                    <thead>
+                        <tr role="row">
+                            <th tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" style="width: 172px;">Code</th>
+                            <th tabindex="0" aria-controls="example" rowspan="1" colspan="1"style="width: 172px;">Line of Business</th>
+                            <th tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 172px;">No. of Units</th>
+                            <th tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 172px;">Capitalization</th>
+                            <th tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 172px; font-size: smaller;">Gross Sales / Receipts (Essential)</th>
+                            <th tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 172px; font-size: smaller;">Gross Sales / Receipts (Non-Essential)</th>
+                        </tr>
+                    </thead>
+                    <tbody aria-live="polite" aria-relevant="all">
+                        <tr class="odd">
+                            <td class=" "> </td>
+                            <td class=" "> </td>
+                            <td class=" "> </td>
+                            <td class=" "> </td>
+                            <td class=" "> </td>
+                            <td class=" "> </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-bottom: -15px;">
+                    <a href="javascript:void(0);" onclick="fnClickAddRow();">Click to add a new row</a>
+                </p>
+            </div>
+            <div class="col-lg-12">
+                <div class="btn pager">
+                    <a href="third form.html">
+                        <span>
+                            <i class="fui-arrow-left"></i>
+                            Back
+                        </span>
+                    </a>
+                </div>
+                <div class="btn pager pull-right">
+                    <a href="#">
+                        <span>
+                            Next
+                            <i class="fui-arrow-right"></i>
+
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -8,9 +8,27 @@ and open the template in the editor.
     Author     : viancavillacorta
 */
 .section1 {
-    background-color: #ECF0F1;
+    /* background-color: #ECF0F1; */
+    /* background-image: url('../images/success2.jpg');*/
+    background-image: url('../images/ortigas1.jpg');
+    background-size: cover;
+    background-position: right;
+    min-height: 600px;
 }
 
 .section2 {
-    background-color: #1ABC9C;
+  /*background-color: #1ABC9C;*/
+  /*background-image: url('../images/biz1.jpg');*/
+    background-image: url('../images/biz1.jpg');
+    background-size: cover  ;
+    background-position: right;
+    min-height: 600px;
+}
+
+.section3 {
+   // background-color: #1ABC9C;
+ //   background-color: rgba(40,40,175,0.5);
+    background-image: url('../images/whitebg1.jpg');
+
+    min-height: 600px;
 }

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Process-Bilis</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+        <!-- Loading Flat UI -->
+        <link href="css/flat-ui.css" rel="stylesheet">
+
+        <link href="css/style.css" rel="stylesheet">
+
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <script src="js/application.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(':checkbox').on('toggle', function() {
+                    document.getElementById("1").disabled = true;
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <div class="container" style="padding-top: 3px;">
+            <div>
+                <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                            <span class="sr-only">Toggle navigation</span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse-01">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li>
+                                <a href="#">Process-Bilis</a>
+                            </li>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--<ol class="breadcrumb" style="margin-top: -30px;">
+            <li class="active"><a href="#"></a></li>
+            <li></li>
+        </ol>-->
+        <div class="container">
+            <div class="progress progress-striped active">
+                <div class="progress-bar" style="width: 75%;"></div>
+            </div>
+            <div class="col-lg-4">
+                <input type="text" placeholder="Business Area (in sqm)" class="form-control" style="margin-bottom: 3px;" />
+            </div>
+            <div class="col-lg-4">
+                <input type="text" placeholder="Total No. of Employees in Establishment" class="form-control" style="margin-bottom: 3px;" />
+            </div>
+            <div class="col-lg-4">
+                <input type="text" placeholder="Total No. of Employees Residing in LGU" class="form-control" style="margin-bottom: 20px;" />
+            </div>
+            <div class="col-lg-12">
+                <label class="checkbox" for="checkbox1">
+                    <span class="icons">
+                        <span class="first-icon fui-checkbox-unchecked">
+                        </span> 
+                        <span class="second-icon fui-checkbox-checked">
+                        </span>
+                    </span>
+                    <input type="checkbox" value id="checkbox1" data-toggle="checkbox">Place of Business is Rented
+                </label>
+            </div>
+            <div class="col-lg-6">
+                <input id="1"  type="text" placeholder="Lessor's Name" class="form-control form" style="margin-bottom: 3px; margin-top: -5px;" />
+            </div>
+            <div class="col-lg-6">
+                <input id="2"  type="text" placeholder="Monthly Rental" class="form-control form" style="margin-bottom: 5px; margin-top: -5px;" />
+            </div>
+            <div class="col-lg-12">
+                <input id="3"  type="text" placeholder="Lessor's Address" class="form-control form" style="margin-bottom: 5px;" />
+            </div>
+            <div class="col-lg-6">
+                <input id="4"  type="text" placeholder="House No./ Bldg. No" class="form-control form" style="margin-bottom: 3px;" />
+                <input id="5" type="text" placeholder="Street" class="form-control form" style="margin-bottom: 3px;" />
+                <input id="6"  type="text" placeholder="Barangay" class="form-control form" style="margin-bottom: 3px;" />
+                <input id="7"  type="text" placeholder="Tel. No." class="form-control form" style="margin-bottom: 3px;" />
+            </div>
+            <div class="col-lg-6">
+                <input id="8"  type="text" placeholder="City/ Municipality" class="form-control form" style="margin-bottom: 3px;" />
+                <input id="9"  type="text" placeholder="Contract Person" class="form-control form" style="margin-bottom: 3px;" />
+                <input id="10" type="text" placeholder="Tel. No./ Mobile Phone No." class="form-control form" style="margin-bottom: 3px;" />
+            </div>
+            <div class="col-lg-12">
+                <div class="btn pager">
+                    <a href="second form.html">
+                        <span>
+                            <i class="fui-arrow-left"></i>
+                            Back
+                        </span>
+                    </a>
+                </div>
+                <div class="btn pager pull-right">
+                    <a href="fourth form.html">
+                        <span>
+                            Next
+                            <i class="fui-arrow-right"></i>
+
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
